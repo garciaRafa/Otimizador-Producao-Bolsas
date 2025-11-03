@@ -1,0 +1,29 @@
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Ambiente Virtual
+# Não enviar a pasta 'venv' que contém todas as bibliotecas instaladas
+venv/
+*.pyc
+
+# Pacotes e Ambientes Python
+__pycache__/
+*.egg-info
+build/
+dist/
+
+# Ferramentas de Notebooks
+.ipynb_checkpoints
+
+# Streamlit (Cache e Configuração Local)
+.streamlit/
+cache/
+
+# IDEs (como VS Code ou PyCharm)
+.idea/
+.vscode/
+
+# Arquivos de Dados Temporários/Saída (se não forem parte essencial do código)
+# Por exemplo, resultados de rodadas de otimização que não precisam de versionamento
+# Mas o arquivo de DADOS DE ENTRADA (dados_bolsas.csv) DEVE ser incluído!
