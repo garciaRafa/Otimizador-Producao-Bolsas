@@ -3,7 +3,6 @@
 Thumbs.db
 
 # Ambiente Virtual
-# Não enviar a pasta 'venv' que contém todas as bibliotecas instaladas
 venv/
 *.pyc
 
@@ -20,10 +19,6 @@ dist/
 .streamlit/
 cache/
 
-# IDEs (como VS Code ou PyCharm)
+# IDEs
 .idea/
 .vscode/
-
-# Arquivos de Dados Temporários/Saída (se não forem parte essencial do código)
-# Por exemplo, resultados de rodadas de otimização que não precisam de versionamento
-# Mas o arquivo de DADOS DE ENTRADA (dados_bolsas.csv) DEVE ser incluído!
