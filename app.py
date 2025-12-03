@@ -84,7 +84,6 @@ with st.sidebar:
     st.markdown("---")
 
 
-# 2.3 Área Principal (Edição dos Modelos)
 st.subheader("👜 Edição dos Parâmetros de Produção")
 st.info("⚠️ Edite os valores abaixo para definir os parâmetros e limites de cada modelo. Adicione novas linhas se necessário.")
 
@@ -128,24 +127,20 @@ if st.button('🚀 Calcular Plano de Produção Ótimo', type="primary"):
     else:
         with st.spinner('Otimizando o plano de produção...'):
             resultados = calcular_e_otimizar(df_validado, horas_total, arredondar_resultado)
-        
-        # 3. EXIBIÇÃO DOS RESULTADOS
-        
+
         if resultados[0] is not None:
             df_otimo, lucro_maximo, tempo_usado, mensagem = resultados
             
             st.success("Cálculo concluído com sucesso!")
             
             col1, col2 = st.columns(2)
-            
-            # Coluna 1: Métricas Chave
+
             with col1:
                 st.metric(
                     "💰 Lucro Máximo Mensal", 
                     f"R$ {lucro_maximo:,.2f}"
                 )
                 
-                # Exibe o tempo usado em relação ao total
                 delta_tempo = round(tempo_usado - horas_total, 2)
                 st.metric(
                     "Horas de Trabalho Usadas", 
@@ -154,7 +149,6 @@ if st.button('🚀 Calcular Plano de Produção Ótimo', type="primary"):
                     delta_color="inverse"
                 )
 
-            # Coluna 2: Plano de Produção Detalhado
             with col2:
                 st.subheader("Plano de Produção Ótimo")
                 
